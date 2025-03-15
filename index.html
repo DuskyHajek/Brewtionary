@@ -14,7 +14,7 @@
     <div class="container">
         <header>
             <div class="logo-container">
-                <h1>Brewtionary</h1>
+                <h1><i class="fas fa-beer"></i> Brewtionary</h1>
                 <p class="tagline">Unlock the Language of Beer</p>
             </div>
             <div class="search-container">
@@ -28,10 +28,10 @@
         
         <main>
             <div class="content-tabs">
-                <button class="tab-btn active" data-tab="dictionary">Dictionary</button>
-                <button class="tab-btn" data-tab="facts">Facts</button>
-                <button class="tab-btn" data-tab="events">Events</button>
-                <button class="tab-btn" data-tab="jokes">Jokes</button>
+                <button class="tab-btn active" data-tab="dictionary"><i class="fas fa-book"></i> Dictionary</button>
+                <button class="tab-btn" data-tab="facts"><i class="fas fa-info-circle"></i> Facts</button>
+                <button class="tab-btn" data-tab="events"><i class="fas fa-history"></i> Events</button>
+                <button class="tab-btn" data-tab="jokes"><i class="fas fa-laugh"></i> Jokes</button>
             </div>
             
             <div id="dictionary" class="tab-content active">
@@ -40,6 +40,9 @@
                         <div class="welcome-hero-content">
                             <h2>Welcome to Brewtionary!</h2>
                             <p>Your ultimate guide to craft beer terminology. Search above or explore our curated collection of beer knowledge below.</p>
+                            <div class="hero-buttons">
+                                <button id="random-term-btn" class="action-btn"><i class="fas fa-random"></i> Random Term</button>
+                            </div>
                         </div>
                     </div>
                     <div id="featured-term" class="featured-term"></div>
@@ -50,28 +53,46 @@
             
             <div id="facts" class="tab-content">
                 <h2>Interesting Beer Facts</h2>
+                <p class="section-intro">Did you know these fascinating tidbits about beer? Impress your friends with these brewtiful facts!</p>
                 <div id="facts-container" class="facts-container"></div>
                 <button id="random-fact-btn" class="action-btn"><i class="fas fa-beer"></i> Show Random Fact</button>
             </div>
             
             <div id="events" class="tab-content">
                 <h2>Beer History Timeline</h2>
-                <div id="events-container" class="events-container"></div>
+                <p class="section-intro">Explore the rich history of beer through the ages with our interactive timeline.</p>
+                <div id="events-container" class="events-container timeline-wrapper"></div>
             </div>
             
             <div id="jokes" class="tab-content">
                 <h2>Beer Jokes</h2>
+                <p class="section-intro">Have a laugh with these beer-related jokes and puns. They get better after a pint or two!</p>
                 <div id="jokes-container" class="jokes-container"></div>
                 <button id="random-joke-btn" class="action-btn"><i class="fas fa-laugh"></i> Tell Me Another!</button>
             </div>
         </main>
         
         <footer>
-            <p>&copy; 2023 Brewtionary - Unlock the world of beer!</p>
-            <div class="social-share">
-                <button class="share-btn" id="share-app"><i class="fas fa-share-alt"></i> Share App</button>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#" class="footer-link">About</a>
+                    <a href="#" class="footer-link">Contact</a>
+                    <a href="#" class="footer-link">Privacy</a>
+                </div>
+                <p>&copy; 2025 duskyAI</p>
+                <div class="social-share">
+                    <button class="share-btn" id="share-app"><i class="fas fa-share-alt"></i> Share App</button>
+                </div>
             </div>
         </footer>
+    </div>
+
+    <div id="toast-notification" class="toast-notification">
+        <div class="toast-content">
+            <i class="fas fa-check-circle toast-icon"></i>
+            <div class="toast-message">Message goes here</div>
+        </div>
+        <button class="toast-close">&times;</button>
     </div>
 
     <script src="js/main.js"></script>

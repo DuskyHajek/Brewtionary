@@ -30,6 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize share button
     document.getElementById('share-app').addEventListener('click', shareApp);
+
+    // Add event listener for random term button
+    const randomTermBtn = document.getElementById('random-term-btn');
+    if (randomTermBtn) {
+        randomTermBtn.addEventListener('click', showRandomTerm);
+    }
 });
 
 // Function to initialize tab switching
@@ -260,4 +266,203 @@ function copyToClipboard(text) {
             document.body.removeChild(tempInput);
             alert('Link copied to clipboard! Share it with your friends.');
         });
+}
+
+// Function to show toast notifications
+function showToast(message, type = 'success') {
+    const toastElement = document.getElementById('toast-notification');
+    const toastMessage = toastElement.querySelector('.toast-message');
+    const toastIcon = toastElement.querySelector('.toast-icon');
+    const toastCloseBtn = toastElement.querySelector('.toast-close');
+    
+    // Set message
+    toastMessage.textContent = message;
+    
+    // Set icon and color based on type
+    toastIcon.className = 'toast-icon';
+    toastElement.className = 'toast-notification';
+    
+    switch(type) {
+        case 'success':
+            toastIcon.classList.add('fas', 'fa-check-circle');
+            toastElement.classList.add('success');
+            break;
+        case 'error':
+            toastIcon.classList.add('fas', 'fa-exclamation-circle');
+            toastElement.classList.add('error');
+            break;
+        case 'info':
+            toastIcon.classList.add('fas', 'fa-info-circle');
+            toastElement.classList.add('info');
+            break;
+        default:
+            toastIcon.classList.add('fas', 'fa-check-circle');
+    }
+    
+    // Show toast
+    toastElement.classList.add('show');
+    
+    // Add close button functionality
+    toastCloseBtn.onclick = function() {
+        toastElement.classList.remove('show');
+    };
+    
+    // Automatically hide toast after 3 seconds
+    setTimeout(() => {
+        toastElement.classList.remove('show');
+    }, 3000);
+}
+
+// Close toast on button click
+document.querySelector('.toast-close').addEventListener('click', () => {
+    document.getElementById('toast-notification').classList.remove('visible');
+});
+
+// Add pulse animation to the random buttons
+document.querySelectorAll('.action-btn').forEach(btn => {
+    btn.classList.add('pulse');
+    
+    // Remove pulse on hover to avoid conflict with hover animation
+    btn.addEventListener('mouseenter', () => {
+        btn.classList.remove('pulse');
+    });
+    
+    // Add pulse back when mouse leaves
+    btn.addEventListener('mouseleave', () => {
+        setTimeout(() => {
+            btn.classList.add('pulse');
+        }, 300);
+    });
+});
+
+// Smooth tab transitions
+const tabButtons = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Get tab ID
+        const tabId = button.dataset.tab;
+        
+        // Add exit animation to current active tab
+        const activeTab = document.querySelector('.tab-content.active');
+        activeTab.style.opacity = '0';
+        activeTab.style.transform = 'translateY(20px)';
+        
+        // Change active tab after animation
+        setTimeout(() => {
+            // Remove active class from all tabs and buttons
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+                content.style.opacity = '0';
+                content.style.transform = 'translateY(20px)';
+            });
+            
+            // Add active class to selected tab and button
+            button.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+            
+            // Add entrance animation to new active tab
+            setTimeout(() => {
+                document.getElementById(tabId).style.opacity = '1';
+                document.getElementById(tabId).style.transform = 'translateY(0)';
+            }, 50);
+        }, 300);
+    });
+});
+
+// Share functionality
+document.getElementById('share-app').addEventListener('click', async () => {
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: 'Brewtionary - Unlock the Language of Beer',
+                text: 'Check out this awesome beer dictionary app!',
+                url: window.location.href
+            });
+            showToast('Thanks for sharing!', 'success');
+        } catch (error) {
+            console.error('Error sharing:', error);
+            // User probably canceled
+        }
+    } else {
+        // Fallback for browsers that don't support Web Share API
+        const dummyInput = document.createElement('input');
+        dummyInput.value = window.location.href;
+        document.body.appendChild(dummyInput);
+        dummyInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummyInput);
+        showToast('Link copied to clipboard!', 'success');
+    }
+});
+
+// Add animation classes to elements when they come into view
+const animateOnScroll = () => {
+    const elements = document.querySelectorAll('.result-card, .fact-card, .event-card, .joke-card');
+    
+    elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        
+        if (elementPosition < screenPosition) {
+            if (!element.classList.contains('animated')) {
+                element.classList.add('animated');
+                element.style.animation = 'fadeInUp 0.5s ease forwards';
+            }
+        }
+    });
+};
+
+// Run animation check on scroll
+window.addEventListener('scroll', animateOnScroll);
+
+// Mobile improvements for search
+const searchInput = document.getElementById('search-input');
+const searchBtn = document.getElementById('search-btn');
+
+// Make search input expand on small screens when focused
+if (window.innerWidth <= 480) {
+    searchInput.addEventListener('focus', () => {
+        searchInput.style.width = '80%';
+        searchBtn.style.width = '20%';
+    });
+    
+    searchInput.addEventListener('blur', () => {
+        if (searchInput.value === '') {
+            searchInput.style.width = '70%';
+            searchBtn.style.width = '30%';
+        }
+    });
+}
+
+// Initialize the app
+window.addEventListener('DOMContentLoaded', () => {
+    // Show welcome message
+    setTimeout(() => {
+        showToast('Welcome to Brewtionary! 🍺', 'info');
+    }, 1000);
+    
+    // Run initial animations
+    animateOnScroll();
+    
+    // Set opacity for tabs (needed for transitions)
+    document.querySelector('.tab-content.active').style.opacity = '1';
+    document.querySelector('.tab-content.active').style.transform = 'translateY(0)';
+});
+
+// Function to show a random term
+function showRandomTerm() {
+    if (dictionaryData.length === 0) {
+        console.error('Dictionary data not loaded');
+        showToast('Failed to load random term', 'error');
+        return;
+    }
+    
+    const randomIndex = Math.floor(Math.random() * dictionaryData.length);
+    const randomTerm = dictionaryData[randomIndex];
+    
+    // Use the existing searchTerm function to display the term details
+    searchTerm(randomTerm.term);
 } 
