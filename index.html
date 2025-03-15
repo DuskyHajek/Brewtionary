@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brewtionary - Unlock the Language of Beer</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="Brewtionary - Your ultimate guide to beer terminology, facts, and jokes.">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <h1>Brewtionary</h1>
+                <p class="tagline">Unlock the Language of Beer</p>
+            </div>
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search beer terms...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div id="search-suggestions" class="search-suggestions"></div>
+            </div>
+        </header>
+        
+        <main>
+            <div class="content-tabs">
+                <button class="tab-btn active" data-tab="dictionary">Dictionary</button>
+                <button class="tab-btn" data-tab="facts">Facts</button>
+                <button class="tab-btn" data-tab="events">Events</button>
+                <button class="tab-btn" data-tab="jokes">Jokes</button>
+            </div>
+            
+            <div id="dictionary" class="tab-content active">
+                <div class="welcome-message">
+                    <h2>Welcome to Brewtionary!</h2>
+                    <p>Search for beer terms above or browse our featured terms below.</p>
+                    <div id="featured-term" class="featured-term"></div>
+                </div>
+                <div id="search-results" class="search-results"></div>
+                <div id="term-details" class="term-details"></div>
+            </div>
+            
+            <div id="facts" class="tab-content">
+                <h2>Interesting Beer Facts</h2>
+                <div id="facts-container" class="facts-container"></div>
+                <button id="random-fact-btn" class="action-btn">Show Random Fact</button>
+            </div>
+            
+            <div id="events" class="tab-content">
+                <h2>Beer History Timeline</h2>
+                <div id="events-container" class="events-container"></div>
+            </div>
+            
+            <div id="jokes" class="tab-content">
+                <h2>Beer Jokes</h2>
+                <div id="jokes-container" class="jokes-container"></div>
+                <button id="random-joke-btn" class="action-btn">Tell Me Another!</button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2023 Brewtionary - Share the knowledge!</p>
+            <div class="social-share">
+                <button class="share-btn" id="share-app"><i class="fas fa-share-alt"></i> Share App</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/dictionary.js"></script>
+    <script src="js/facts.js"></script>
+</body>
+</html> 

@@ -1,0 +1,352 @@
+[
+    {
+      "term": "Ale",
+      "definition": "A type of beer fermented at warmer temperatures using top-fermenting yeast, resulting in various flavors and styles.",
+      "pronunciation": "/eɪl/",
+      "related_terms": ["IPA", "Stout", "Wheat Beer", "Fermentation", "Yeast"],
+      "icon": "A pint glass with a golden-colored beer and a thick, white head"
+    },
+    {
+      "term": "Lager",
+      "definition": "A type of beer fermented at cooler temperatures using bottom-fermenting yeast, known for its crisp and clean taste.",
+      "pronunciation": "/ˈlæɡər/",
+      "related_terms": ["Pilsner", "Bock", "Fermentation", "Yeast"],
+      "icon": "A tall, clear glass with a pale, bubbly beer"
+    },
+    {
+      "term": "IPA",
+      "definition": "India Pale Ale, a hoppy, bitter ale known for its strong hop flavor and aroma, originating in England.",
+      "pronunciation": "/aɪ piː eɪ/",
+      "related_terms": ["Hops", "Ale", "Bitterness", "Aroma"],
+      "icon": "A glass of beer with a hop leaf or cone beside it"
+    },
+    {
+      "term": "APA",
+      "definition": "American Pale Ale, a lighter, hoppy ale with a balanced malt flavor, developed in the United States.",
+      "pronunciation": "/eɪ piː eɪ/",
+      "related_terms": ["Hops", "Ale", "Malt", "Bitterness"],
+      "icon": "A pint glass with a light amber beer and a hop flower"
+    },
+    {
+      "term": "Stout",
+      "definition": "A dark, rich ale made with roasted malt or barley, often with coffee or chocolate flavors.",
+      "pronunciation": "/staʊt/",
+      "related_terms": ["Ale", "Porter", "Malt", "Flavor"],
+      "icon": "A dark beer in a glass with a creamy head"
+    },
+    {
+      "term": "Porter",
+      "definition": "A dark ale similar to stout but lighter, with roasted malt flavors like caramel or toffee.",
+      "pronunciation": "/ˈpɔːrtər/",
+      "related_terms": ["Stout", "Ale", "Malt", "Flavor"],
+      "icon": "A glass of dark brown beer with a thin head"
+    },
+    {
+      "term": "Wheat Beer",
+      "definition": "A beer brewed with a large portion of wheat, often light and cloudy with fruity or spicy notes.",
+      "pronunciation": "/wiːt bɪr/",
+      "related_terms": ["Ale", "Yeast", "Clarity", "Flavor"],
+      "icon": "A hazy, pale beer in a tall glass with a wheat stalk"
+    },
+    {
+      "term": "Pilsner",
+      "definition": "A pale, crisp lager with a light hoppy flavor, originating in the Czech Republic.",
+      "pronunciation": "/ˈpɪlznər/",
+      "related_terms": ["Lager", "Hops", "Clarity", "Bitterness"],
+      "icon": "A tall glass of golden beer with a white head"
+    },
+    {
+      "term": "Bock",
+      "definition": "A strong, malty German lager with a smooth, rich taste, traditionally brewed for special occasions.",
+      "pronunciation": "/bɒk/",
+      "related_terms": ["Lager", "Malt", "Doppelbock", "ABV"],
+      "icon": "A sturdy glass mug with a deep amber beer"
+    },
+    {
+      "term": "Doppelbock",
+      "definition": "A stronger, richer version of bock, a German lager with intense malt flavors.",
+      "pronunciation": "/ˈdɒpəlˌbɒk/",
+      "related_terms": ["Bock", "Lager", "Malt", "ABV"],
+      "icon": "A dark, robust beer in a goblet-style glass"
+    },
+    {
+      "term": "Hops",
+      "definition": "The female flower of the hop plant, used in brewing to add bitterness, flavor, and aroma to beer.",
+      "pronunciation": "/hɒps/",
+      "related_terms": ["Bitterness", "Aroma", "Flavor", "IPA"],
+      "icon": "A hop cone or a bunch of hop leaves"
+    },
+    {
+      "term": "Malt",
+      "definition": "Grain (usually barley) that’s been soaked, germinated, and dried, used to add sweetness and body to beer.",
+      "pronunciation": "/mɔːlt/",
+      "related_terms": ["Sweetness", "Mashing", "Stout", "Flavor"],
+      "icon": "A handful of malted barley grains"
+    },
+    {
+      "term": "Yeast",
+      "definition": "A microorganism that ferments sugars into alcohol and carbon dioxide, essential for brewing beer.",
+      "pronunciation": "/jiːst/",
+      "related_terms": ["Fermentation", "Ale", "Lager", "ABV"],
+      "icon": "A bubbling yeast culture or a microscope view"
+    },
+    {
+      "term": "Fermentation",
+      "definition": "The process where yeast converts sugars into alcohol and carbon dioxide, giving beer its alcohol and carbonation.",
+      "pronunciation": "/ˌfɜːrmənˈteɪʃən/",
+      "related_terms": ["Yeast", "ABV", "Conditioning", "Fermenter"],
+      "icon": "A fermenter with a bubbling airlock"
+    },
+    {
+      "term": "Mashing",
+      "definition": "The process of mixing crushed malt with hot water to convert starches into fermentable sugars.",
+      "pronunciation": "/ˈmæʃɪŋ/",
+      "related_terms": ["Malt", "Mash tun", "Fermentation"],
+      "icon": "A pot with steaming mash and a paddle"
+    },
+    {
+      "term": "Boiling",
+      "definition": "Heating the wort to sterilize it and extract flavors from hops during brewing.",
+      "pronunciation": "/ˈbɔɪlɪŋ/",
+      "related_terms": ["Hops", "Wort", "Brew pot"],
+      "icon": "A bubbling brew pot with steam"
+    },
+    {
+      "term": "Conditioning",
+      "definition": "The aging process after fermentation that improves beer’s flavor and carbonation.",
+      "pronunciation": "/kənˈdɪʃənɪŋ/",
+      "related_terms": ["Fermentation", "Carbonation", "Keg"],
+      "icon": "A beer bottle or keg with a clock"
+    },
+    {
+      "term": "Bitterness",
+      "definition": "The sharp taste in beer, mainly from hops, measured in IBUs.",
+      "pronunciation": "/ˈbɪtərnəs/",
+      "related_terms": ["Hops", "IPA", "IBU"],
+      "icon": "A hop cone with a wavy bitterness symbol"
+    },
+    {
+      "term": "Sweetness",
+      "definition": "A taste in beer from malt sugars that weren’t fully fermented.",
+      "pronunciation": "/ˈswiːtnəs/",
+      "related_terms": ["Malt", "Stout", "Gravity"],
+      "icon": "A sugar cube next to a beer glass"
+    },
+    {
+      "term": "Aroma",
+      "definition": "The smell of beer, influenced by hops, malt, and yeast.",
+      "pronunciation": "/əˈroʊmə/",
+      "related_terms": ["Hops", "Malt", "IPA"],
+      "icon": "A beer glass with wavy aroma lines"
+    },
+    {
+      "term": "Flavor",
+      "definition": "The taste of beer, combining sweetness, bitterness, and other notes from ingredients.",
+      "pronunciation": "/ˈfleɪvər/",
+      "related_terms": ["Hops", "Malt", "Stout"],
+      "icon": "A tongue icon with a beer glass"
+    },
+    {
+      "term": "Color",
+      "definition": "The hue of beer, from pale gold to dark brown, influenced by malt.",
+      "pronunciation": "/ˈkʌlər/",
+      "related_terms": ["Malt", "SRM", "Stout"],
+      "icon": "A gradient of beer colors in glasses"
+    },
+    {
+      "term": "Clarity",
+      "definition": "How clear or hazy a beer appears, affected by filtration and ingredients.",
+      "pronunciation": "/ˈklærɪti/",
+      "related_terms": ["Wheat Beer", "Pilsner"],
+      "icon": "A clear beer glass next to a hazy one"
+    },
+    {
+      "term": "Head",
+      "definition": "The frothy layer on top of beer, formed by carbonation and proteins.",
+      "pronunciation": "/hɛd/",
+      "related_terms": ["Carbonation", "Pint"],
+      "icon": "A beer glass with a thick foam head"
+    },
+    {
+      "term": "Gravity",
+      "definition": "A measure of the density of wort or beer, indicating sugar content and potential alcohol.",
+      "pronunciation": "/ˈɡrævɪti/",
+      "related_terms": ["ABV", "Fermentation"],
+      "icon": "A hydrometer floating in wort"
+    },
+    {
+      "term": "ABV",
+      "definition": "Alcohol by Volume, the percentage of alcohol in beer.",
+      "pronunciation": "/eɪ biː viː/",
+      "related_terms": ["Fermentation", "Yeast", "Gravity"],
+      "icon": "A beer bottle with a percentage symbol"
+    },
+    {
+      "term": "IBU",
+      "definition": "International Bitterness Units, a scale measuring beer’s bitterness from hops.",
+      "pronunciation": "/aɪ biː juː/",
+      "related_terms": ["Bitterness", "Hops", "IPA"],
+      "icon": "A hop cone with a gauge"
+    },
+    {
+      "term": "SRM",
+      "definition": "Standard Reference Method, a scale for measuring beer color.",
+      "pronunciation": "/ɛs ɑːr ɛm/",
+      "related_terms": ["Color", "Malt"],
+      "icon": "A color chart next to a beer glass"
+    },
+    {
+      "term": "Mash tun",
+      "definition": "A vessel used in brewing to mix malt with hot water during mashing.",
+      "pronunciation": "/mæʃ tʌn/",
+      "related_terms": ["Mashing", "Malt"],
+      "icon": "A large pot or tank with a false bottom"
+    },
+    {
+      "term": "Brew pot",
+      "definition": "A large pot used to boil wort and hops during brewing.",
+      "pronunciation": "/bruː pɒt/",
+      "related_terms": ["Boiling", "Hops"],
+      "icon": "A steaming pot with a lid"
+    },
+    {
+      "term": "Fermenter",
+      "definition": "A container where wort ferments into beer with yeast.",
+      "pronunciation": "/ˈfɜːrmɛntər/",
+      "related_terms": ["Fermentation", "Yeast"],
+      "icon": "A cylindrical tank with an airlock"
+    },
+    {
+      "term": "Keg",
+      "definition": "A metal container for storing and serving beer under pressure.",
+      "pronunciation": "/kɛɡ/",
+      "related_terms": ["Conditioning", "Tap", "Draft"],
+      "icon": "A silver keg with a tap"
+    },
+    {
+      "term": "Homebrewing",
+      "definition": "The process of making beer at home for personal use.",
+      "pronunciation": "/ˈhoʊmˌbruːɪŋ/",
+      "related_terms": ["Craft beer", "Mashing", "Fermentation"],
+      "icon": "A small brewing setup with a fermenter"
+    },
+    {
+      "term": "Craft beer",
+      "definition": "Beer made by small, independent breweries with a focus on quality and flavor.",
+      "pronunciation": "/kræft bɪr/",
+      "related_terms": ["Microbrewery", "Homebrewing"],
+      "icon": "A rustic beer bottle with a craft label"
+    },
+    {
+      "term": "Microbrewery",
+      "definition": "A small brewery producing limited amounts of craft beer.",
+      "pronunciation": "/ˈmaɪkroʊˌbruːəri/",
+      "related_terms": ["Craft beer", "Beer festival"],
+      "icon": "A small brewery building with barrels"
+    },
+    {
+      "term": "Beer judge",
+      "definition": "A trained person who evaluates beer based on style, taste, and quality.",
+      "pronunciation": "/bɪr dʒʌdʒ/",
+      "related_terms": ["Flavor", "Aroma", "Beer festival"],
+      "icon": "A clipboard with a beer glass"
+    },
+    {
+      "term": "Beer sommelier",
+      "definition": "An expert in beer who advises on tasting, pairing, and serving.",
+      "pronunciation": "/bɪr sɒməlˈjeɪ/",
+      "related_terms": ["Beer pairing", "Flavor"],
+      "icon": "A person pouring beer with a tasting tray"
+    },
+    {
+      "term": "Beer flight",
+      "definition": "A set of small glasses with different beers for tasting.",
+      "pronunciation": "/bɪr flaɪt/",
+      "related_terms": ["Beer festival", "Flavor"],
+      "icon": "A wooden tray with small beer glasses"
+    },
+    {
+      "term": "Beer pairing",
+      "definition": "Matching beer with food to enhance flavors of both.",
+      "pronunciation": "/bɪr ˈpɛərɪŋ/",
+      "related_terms": ["Flavor", "Beer sommelier"],
+      "icon": "A beer glass next to a plate of food"
+    },
+    {
+      "term": "Beer festival",
+      "definition": "An event showcasing various beers for sampling and learning.",
+      "pronunciation": "/bɪr ˈfɛstɪvəl/",
+      "related_terms": ["Craft beer", "Beer flight"],
+      "icon": "A crowd with beer glasses and festival vibes"
+    },
+    {
+      "term": "Beer garden",
+      "definition": "An outdoor area where beer and food are served, often communal.",
+      "pronunciation": "/bɪr ˈɡɑːrdn/",
+      "related_terms": ["Pint", "Community"],
+      "icon": "A long table with beer mugs in a garden"
+    },
+    {
+      "term": "Pint",
+      "definition": "A common serving size for beer, about 16 ounces in the U.S.",
+      "pronunciation": "/paɪnt/",
+      "related_terms": ["Head", "Draft"],
+      "icon": "A classic pint glass filled with beer"
+    },
+    {
+      "term": "Schooner",
+      "definition": "A glass size for beer, typically 15 ounces, common in Australia.",
+      "pronunciation": "/ˈskuːnər/",
+      "related_terms": ["Pint", "Draft"],
+      "icon": "A slightly curved beer glass"
+    },
+    {
+      "term": "Stein",
+      "definition": "A traditional German beer mug, often with a lid.",
+      "pronunciation": "/staɪn/",
+      "related_terms": ["Pint", "Beer garden"],
+      "icon": "A stone mug with a hinged lid"
+    },
+    {
+      "term": "Growler",
+      "definition": "A large jug (usually 64 ounces) for carrying draft beer home.",
+      "pronunciation": "/ˈɡraʊlər/",
+      "related_terms": ["Draft", "Craft beer"],
+      "icon": "A glass or metal jug with a cap"
+    },
+    {
+      "term": "Crowler",
+      "definition": "A 32-ounce can filled with draft beer and sealed for takeout.",
+      "pronunciation": "/ˈkraʊlər/",
+      "related_terms": ["Can", "Draft"],
+      "icon": "A large aluminum can with a beer label"
+    },
+    {
+      "term": "Bottle",
+      "definition": "A glass container for storing and serving beer.",
+      "pronunciation": "/ˈbɒtl/",
+      "related_terms": ["Conditioning", "Craft beer"],
+      "icon": "A classic brown beer bottle"
+    },
+    {
+      "term": "Can",
+      "definition": "An aluminum container for beer, popular for its portability.",
+      "pronunciation": "/kæn/",
+      "related_terms": ["Crowler", "Craft beer"],
+      "icon": "A silver beer can"
+    },
+    {
+      "term": "Tap",
+      "definition": "A device for dispensing draft beer from a keg.",
+      "pronunciation": "/tæp/",
+      "related_terms": ["Keg", "Draft"],
+      "icon": "A beer tap handle pouring into a glass"
+    },
+    {
+      "term": "Draft",
+      "definition": "Beer served fresh from a keg or tap, not bottled or canned.",
+      "pronunciation": "/dræft/",
+      "related_terms": ["Tap", "Keg", "Pint"],
+      "icon": "A beer glass under a tap"
+    }
+  ]
