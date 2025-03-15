@@ -91,11 +91,29 @@ function displayFacts() {
     const factsContainer = document.getElementById('facts-container');
     factsContainer.innerHTML = '';
     
-    // Display first 5 facts
-    brewFacts.facts.slice(0, 5).forEach(fact => {
+    // Show 3 random facts initially
+    const factIndices = [];
+    const numberOfFacts = Math.min(3, brewFacts.facts.length);
+    
+    // Get unique random indices
+    while (factIndices.length < numberOfFacts) {
+        const randomIndex = Math.floor(Math.random() * brewFacts.facts.length);
+        if (!factIndices.includes(randomIndex)) {
+            factIndices.push(randomIndex);
+        }
+    }
+    
+    // Create fact cards with staggered animation
+    factIndices.forEach((index, i) => {
         const factCard = document.createElement('div');
-        factCard.className = 'fact-card';
-        factCard.textContent = fact;
+        factCard.className = 'fact-card animated';
+        factCard.style.animationDelay = `${i * 0.15}s`;
+        
+        factCard.innerHTML = `
+            <i class="fas fa-beer fact-icon"></i>
+            <p>${brewFacts.facts[index]}</p>
+        `;
+        
         factsContainer.appendChild(factCard);
     });
     
@@ -112,8 +130,11 @@ function showRandomFact() {
     
     const randomIndex = Math.floor(Math.random() * brewFacts.facts.length);
     const factCard = document.createElement('div');
-    factCard.className = 'fact-card';
-    factCard.textContent = brewFacts.facts[randomIndex];
+    factCard.className = 'fact-card animated';
+    factCard.innerHTML = `
+        <i class="fas fa-beer fact-icon"></i>
+        <p>${brewFacts.facts[randomIndex]}</p>
+    `;
     factsContainer.appendChild(factCard);
 }
 
@@ -131,9 +152,17 @@ function displayEvents() {
         return yearA - yearB;
     });
     
-    sortedEvents.forEach(event => {
+    // Add a timeline wrapper
+    const timelineWrapper = document.createElement('div');
+    timelineWrapper.className = 'timeline-wrapper';
+    eventsContainer.appendChild(timelineWrapper);
+    
+    sortedEvents.forEach((event, index) => {
         const eventCard = document.createElement('div');
-        eventCard.className = 'event-card';
+        eventCard.className = 'event-card animated';
+        
+        // Add delay based on index for staggered animation
+        eventCard.style.animationDelay = `${index * 0.1}s`;
         
         // Extract the year
         const yearMatch = event.match(/\d{3,4}/);
@@ -147,7 +176,7 @@ function displayEvents() {
             <div class="event-text">${text}</div>
         `;
         
-        eventsContainer.appendChild(eventCard);
+        timelineWrapper.appendChild(eventCard);
     });
 }
 
@@ -158,10 +187,18 @@ function displayJokes() {
     const jokesContainer = document.getElementById('jokes-container');
     jokesContainer.innerHTML = '';
     
-    // Display first joke
+    // Display first joke with animation
     const jokeCard = document.createElement('div');
-    jokeCard.className = 'joke-card';
-    jokeCard.textContent = brewFacts.jokes[0];
+    jokeCard.className = 'joke-card animated';
+    
+    // Add a slight random rotation for a fun effect
+    const rotation = Math.random() * 2 - 1; // Between -1 and 1 degrees
+    jokeCard.style.transform = `rotate(${rotation}deg)`;
+    
+    jokeCard.innerHTML = `
+        <p>${brewFacts.jokes[0]}</p>
+    `;
+    
     jokesContainer.appendChild(jokeCard);
     
     // Add event listener to joke button
@@ -177,8 +214,13 @@ function showRandomJoke() {
     
     const randomIndex = Math.floor(Math.random() * brewFacts.jokes.length);
     const jokeCard = document.createElement('div');
-    jokeCard.className = 'joke-card';
+    jokeCard.className = 'joke-card animated';
     jokeCard.textContent = brewFacts.jokes[randomIndex];
+    
+    // Add a slight random rotation for a fun effect
+    const rotation = Math.random() * 2 - 1; // Between -1 and 1 degrees
+    jokeCard.style.transform = `rotate(${rotation}deg)`;
+    
     jokesContainer.appendChild(jokeCard);
 }
 

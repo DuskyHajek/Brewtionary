@@ -76,89 +76,71 @@ function addDidYouKnow() {
     }
 }
 
-// Add event listener for sharing facts
-document.addEventListener('DOMContentLoaded', function() {
-    // Add social share buttons to each fact
-    function addShareToFactCards() {
-        const factCards = document.querySelectorAll('.fact-card');
-        
-        factCards.forEach(card => {
-            // Only add share button if it doesn't already have one
-            if (!card.querySelector('.fact-share')) {
-                const shareButton = document.createElement('button');
-                shareButton.className = 'fact-share';
-                shareButton.innerHTML = '<i class="fas fa-share-alt"></i> Share';
-                
-                shareButton.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    const factText = card.textContent.replace('Share', '').trim();
-                    shareFactOrJoke(factText);
-                });
-                
-                card.appendChild(shareButton);
-            }
-        });
-        
-        // Do the same for joke cards
-        const jokeCards = document.querySelectorAll('.joke-card');
-        
-        jokeCards.forEach(card => {
-            if (!card.querySelector('.fact-share')) {
-                const shareButton = document.createElement('button');
-                shareButton.className = 'fact-share';
-                shareButton.innerHTML = '<i class="fas fa-share-alt"></i> Share';
-                
-                shareButton.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    const jokeText = card.textContent.replace('Share', '').trim();
-                    shareFactOrJoke(jokeText);
-                });
-                
-                card.appendChild(shareButton);
-            }
-        });
-    }
+// Function to enhance the display of facts
+function enhanceFactDisplay() {
+    const facts = document.querySelectorAll('.fact-card');
     
-    // Call this function when tabs change
+    facts.forEach(fact => {
+        // Add icon to facts
+        if (!fact.querySelector('.fact-icon')) {
+            const factText = fact.textContent;
+            fact.innerHTML = `
+                <i class="fas fa-beer fact-icon"></i>
+                <p>${factText}</p>
+            `;
+        }
+    });
+}
+
+// Function to enhance the display of jokes
+function enhanceJokeDisplay() {
+    const jokes = document.querySelectorAll('.joke-card');
+    
+    jokes.forEach(joke => {
+        // Make sure each joke has its unique style
+        joke.style.transform = `rotate(${Math.random() * 2 - 1}deg)`;
+    });
+}
+
+// Add event listeners for tab changes to enhance content
+document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.tab-btn');
+    
     tabButtons.forEach(button => {
         button.addEventListener('click', function() {
-            setTimeout(addShareToFactCards, 200);
+            const tabId = this.getAttribute('data-tab');
+            
+            if (tabId === 'facts') {
+                setTimeout(enhanceFactDisplay, 200);
+            } else if (tabId === 'jokes') {
+                setTimeout(enhanceJokeDisplay, 200);
+            }
         });
     });
     
-    // Call this function when random fact/joke buttons are clicked
+    // Also call on initial load if facts tab is active
+    if (document.querySelector('.tab-btn[data-tab="facts"]').classList.contains('active')) {
+        setTimeout(enhanceFactDisplay, 200);
+    }
+    
+    // Also call on initial load if jokes tab is active
+    if (document.querySelector('.tab-btn[data-tab="jokes"]').classList.contains('active')) {
+        setTimeout(enhanceJokeDisplay, 200);
+    }
+    
+    // Call enhance functions when random buttons are clicked
     const randomFactBtn = document.getElementById('random-fact-btn');
     const randomJokeBtn = document.getElementById('random-joke-btn');
     
     if (randomFactBtn) {
         randomFactBtn.addEventListener('click', function() {
-            setTimeout(addShareToFactCards, 200);
+            setTimeout(enhanceFactDisplay, 200);
         });
     }
     
     if (randomJokeBtn) {
         randomJokeBtn.addEventListener('click', function() {
-            setTimeout(addShareToFactCards, 200);
+            setTimeout(enhanceJokeDisplay, 200);
         });
     }
-});
-
-// Function to share a fact or joke
-function shareFactOrJoke(text) {
-    const shareData = {
-        title: 'Brewtionary',
-        text: text + ' | via Brewtionary',
-        url: window.location.href
-    };
-
-    if (navigator.share && navigator.canShare(shareData)) {
-        navigator.share(shareData)
-            .catch(err => {
-                console.log('Error sharing:', err);
-                copyToClipboard(text + ' | via Brewtionary');
-            });
-    } else {
-        copyToClipboard(text + ' | via Brewtionary');
-    }
-} 
+}); 
